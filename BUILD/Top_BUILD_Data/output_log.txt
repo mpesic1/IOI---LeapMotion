@@ -1,0 +1,52 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4064 MB
+    Driver:   21.20.16.4550
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.VR.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
+Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
+- Completed reload, in  0.023 seconds
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Compositor failed to initialize.Compositor failed to initialize.ConvexHullBuilder: convex hull has more than 255 polygons!
+ 
+(Filename: ..\..\PhysXCooking\src\convex\ConvexHullBuilder.cpp Line: 1479)
+
+Gu::ConvexMesh::loadConvexHull: convex hull init failed! Try to use the PxConvexFlag::eINFLATE_CONVEX flag. (see PxToolkit::createConvexMeshSafe)
+ 
+(Filename: ..\..\PhysXCooking\src\convex\ConvexMeshBuilder.cpp Line: 253)
+
+Failed to create Convex Mesh from source mesh "default". Source mesh is likely have too many smooth surface regions. Please reduce the surface smoothness of the source mesh. Alternatively turn on Inflate Mesh and increase the Skin Width sufficiently for this mesh.
+ 
+(Filename:  Line: 54)
+
+UnloadTime: 1.254321 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 894 -> priority: 1 
+  Thread -> id: 2a6c -> priority: 1 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.021039 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1074.
+Total: 0.617481 ms (FindLiveObjects: 0.081382 ms CreateObjectMapping: 0.022518 ms MarkObjects: 0.493432 ms  DeleteObjects: 0.019358 ms)
+
