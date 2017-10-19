@@ -21,7 +21,7 @@ Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD
 Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
 Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\LeapCSharp.NET3.5.dll (this message is harmless)
 Loading E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\LeapCSharp.NET3.5.dll into Unity Child Domain
-- Completed reload, in  0.023 seconds
+- Completed reload, in  0.851 seconds
 Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: E:\Repositories\IOI Leap Motion GitHub\IOI---LeapMotion\BUILD\Top_BUILD_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -40,13 +40,13 @@ Failed to create Convex Mesh from source mesh "default". Source mesh is likely h
  
 (Filename:  Line: 54)
 
-UnloadTime: 1.254321 ms
+UnloadTime: 1.690072 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 894 -> priority: 1 
-  Thread -> id: 2a6c -> priority: 1 
+  Thread -> id: ae0 -> priority: 1 
+  Thread -> id: f14 -> priority: 1 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.021039 ms
+UnloadTime: 6.287399 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1074.
-Total: 0.617481 ms (FindLiveObjects: 0.081382 ms CreateObjectMapping: 0.022518 ms MarkObjects: 0.493432 ms  DeleteObjects: 0.019358 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1024.
+Total: 0.502912 ms (FindLiveObjects: 0.062419 ms CreateObjectMapping: 0.018567 ms MarkObjects: 0.414024 ms  DeleteObjects: 0.007111 ms)
 

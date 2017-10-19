@@ -21,6 +21,7 @@ public class TimerScript : MonoBehaviour {
     float currentTime;
     float startTime;
     bool startTimer = false;
+    public bool allowReset;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,7 @@ public class TimerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(leftHand.activeInHierarchy || rightHand.activeInHierarchy) {
+		if((leftHand.activeInHierarchy || rightHand.activeInHierarchy) && allowReset) {
             startTimer = true;
             startTime = Time.time;
 

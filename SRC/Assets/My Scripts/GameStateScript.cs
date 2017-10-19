@@ -17,9 +17,16 @@ public class GameStateScript : MonoBehaviour {
     public GameObject resetText;
     public GameObject mainCam;
     bool first = true;
+    
+    GameObject timer;
+    TimerScript timerScript;
+
+    public bool anyObjectPicked;
+
 	// Use this for initialization
 	void Start () {
-
+        timer = GameObject.Find("Timer");
+        timerScript = timer.GetComponent<TimerScript>();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +37,8 @@ public class GameStateScript : MonoBehaviour {
                 first = false;
                 mainCam.GetComponent<Animation>().Play();
                 backFace.SetActive(true);
+                // send info to timer to stop resetting
+                timerScript.allowReset = false;
             }
             
             //wholeCannon.transform.Rotate(new Vector3(0, 1, 0));

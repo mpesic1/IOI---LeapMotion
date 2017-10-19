@@ -21,6 +21,8 @@ namespace Leap.Unity {
     float zFrontBound = -2.4f;
     float otherY = -1;
 
+    private GameStateScript gameStateScript;
+
     public enum RotationMethod {
       None,
       Single,
@@ -78,17 +80,14 @@ namespace Leap.Unity {
       GameObject pinchControl = new GameObject("RTS Anchor");
       _anchor = pinchControl.transform;
       _anchor.transform.parent = transform.parent;
-      transform.parent = _anchor;
+      //transform.parent = _anchor;
 
       isPickedUp = false;
       rbd = this.GetComponent<Rigidbody>();
+      gameStateScript = GameObject.Find("GameState").GetComponent<GameStateScript>();
     }
 
     void Update() {
-
-
-        
-
 
       if (Input.GetKeyDown(_toggleGuiState)) {
         _showGUI = !_showGUI;
@@ -101,7 +100,8 @@ namespace Leap.Unity {
         didUpdate |= _pinchDetectorB.DidChangeFromLastFrame;
 
       if (didUpdate) {
-        transform.SetParent(null, true);
+         //transform.SetParent(null, true);
+        transform.parent = _anchor.parent;
       }
 
         /*if (_pinchDetectorA != null && _pinchDetectorA.IsActive && 
@@ -145,11 +145,29 @@ namespace Leap.Unity {
         //if(_anchor.position.z < zFrontBound)
             //transform.position.Set(transform.position.x, transform.position.y, zFrontBound);
         //
-        /*
-        if(transform.position.y < -1)
-                transform.position.Set(transform.position.x, 4, transform.position.z);
-        showX = transform.position.y;
-        */
+        
+        /*if(transform.position.y < -0.5f) {
+            transform.parent = _anchor.parent;
+            transform.position = new Vector3(transform.position.x, 3.4f, transform.position.z);
+            return;
+        }*/
+        if(transform.position.y < 3.14f) {
+            transform.position = new Vector3(transform.position.x, 3.14f, transform.position.z);
+        }
+        if(transform.position.x < -2.1f) {
+            transform.position = new Vector3(-2.1f, transform.position.y, transform.position.z);
+        }
+        if(transform.position.x > -1.48f) {
+            transform.position = new Vector3(-1.48f, transform.position.y, transform.position.z);
+        }
+        if(transform.position.z < -2.2f) {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -2.2f);
+        }
+        if(transform.position.z > -1.95f) {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -1.95f);
+        }
+        showX = transform.position.z;
+        
 
       float distance = Vector3.Distance (transform.position, _anchor.position);
 
@@ -157,17 +175,20 @@ namespace Leap.Unity {
         rbd.isKinematic = true;
         transform.SetParent(_anchor, true);
         isPickedUp = true;
+        gameStateScript.anyObjectPicked = true;
       }
 
     if (whichHand == 0 && !PinchDetectorA.IsHolding) {
         rbd.isKinematic = false;
         whichHand = -1;
         isPickedUp = false;
+        gameStateScript.anyObjectPicked = false;
     }
     else if (whichHand == 1 && !PinchDetectorB.IsHolding) {
         rbd.isKinematic = false;
         whichHand = -1;
         isPickedUp = false;
+        gameStateScript.anyObjectPicked = false;
     }
         
         

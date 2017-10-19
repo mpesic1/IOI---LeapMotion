@@ -34,9 +34,22 @@ public class TargetLocationScript : MonoBehaviour {
             if(leapRTSScript.isPickedUp) {
                 //halo.enabled = true;
                 GetComponent<Renderer>().material = highlight;
+                //gameStateScript.anyObjectPicked = true;
             }
-            else GetComponent<Renderer>().material = silhouette; //halo.enabled = false;
+            else {
+                GetComponent<Renderer>().material = silhouette; //halo.enabled = false;
+                //gameStateScript.anyObjectPicked = false;
+            }
         }
+        else {
+            if(gameStateScript.anyObjectPicked) {
+                GetComponent<Renderer>().material = silhouette;
+            }
+            else {
+                GetComponent<Renderer>().material = cannonMaterial;
+            }
+        }
+
         // put the object in place
         if(distance <= minDist) {
 
@@ -47,6 +60,7 @@ public class TargetLocationScript : MonoBehaviour {
                 gameStateScript.numPlacedObjects--;
                 GameObject.Find("GameState").GetComponent<AudioSource>().Play();
                 isPlaced = true;
+                gameStateScript.anyObjectPicked = false;
             }
         }
 	}
