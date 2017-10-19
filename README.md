@@ -15,11 +15,11 @@
 ## TODO
 - [x] Add sounds
 - [x] Circles to show game progress 
-- [ ] Limit hand or object movement
-- [ ] After completion start uninterruptable timer to reset
-- [ ] Set target material opacity when holding an object
+- [x] Limit hand or object movement
+- [x] After completion start uninterruptable timer to reset
+- [x] Set target material opacity when holding an object
+- [x] Closer targets OR  larger min. distance for target lock 
 - [ ] Implement an alternative to buttons (will not have a touchscreen?)
-- [ ] Closer targets OR  larger min. distance for target lock 
 
 ## Contact
 miha.pesic@gmail.com
